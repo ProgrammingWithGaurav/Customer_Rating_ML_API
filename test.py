@@ -10,8 +10,8 @@ vocab_size = 10000
 embeded_vector_size = 100
 max_length = 300
 
-def PredictCustomerReview(review):
-    data = one_hot(review, vocab_size)
+def PredictCustomerReview(review : str):
+    data = one_hot(str(review), vocab_size)
     sequences = [data]
     padded_review = pad_sequences(sequences, maxlen=max_length, padding='post')
     pred  = model.predict(padded_review)[0][0]
