@@ -4,7 +4,7 @@ const Home = () =>  {
   const [review, setReview] = useState('')
   const [rating, setRating] = useState(null)
   async function fetchData(){
-    const url = 'http://customer-review-rating.azurewebsites.net/predict';
+    const url = 'https://customer-review-rating.azurewebsites.net/predict';
     const data = {
       "review": review
     };
